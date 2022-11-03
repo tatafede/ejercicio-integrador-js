@@ -41,7 +41,7 @@
     </div>
 
     <div class="formulario">
-      <p class="valor">VALOR DE TICKET $2000</p>
+      <p class="valor">VALOR DE TICKET $200</p>
       <div class="grupo">
         <input class="text-input-2" type="text" name="nombre" placeholder="Nombre">
         <input class="text-input-2" type="text" name="apellido" placeholder="Apellido">
@@ -50,7 +50,7 @@
       <div class="grupo">
         <div class="label-input-grupo">
           <label class="label-input" for="cantidad">Cantidad</label>
-          <input class="text-input-1" type="number" name="cantidad" placeholder="Cantidad">
+          <input class="text-input-1" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
         </div>
         <div class="label-input-grupo">
           <label class="label-input" for="categoria">Categoría</label>
@@ -62,11 +62,13 @@
         </div>
       </div>
   
-      <div id="totalAPagar"></div>
+      <div class="total-pagar"  id="totalAPagarDiv" hidden>
+        <p class="totalAPagar" id="totalAPagar">Total a pagar: $</p>
+      </div>
   
       <div class="botones">
         <button class="boton">Borrar</button>
-        <button class="boton">Resumen</button>
+        <button class="boton" onClick="mostrarTotalAPagar()">Resumen</button>
       </div>
     </div>
   </div>
@@ -81,5 +83,32 @@
     <a class="item" href="#">Privacidad</a>
     <a class="item" href="#">Estudiantes</a>
   </div>
+   <script>
+    function calcularTotalAPagar(cantidad, categoria) {
+      let precio = 200;
+      let descuento = 0;
+      let totalAPagar = 0;
+      switch (categoria) {
+        case "estudiante":
+          descuento = 0.8;
+          break;
+        case "trainee":
+          descuento = 0.5;
+          break;
+        case "junior":
+          descuento = 0.15;
+          break;
+      }
+      totalAPagar = (1 - descuento) * precio * cantidad;
+      return Math.ceil(totalAPagar);
+    }    
+    function mostrarTotalAPagar() {
+      let cantidad = document.getElementById("cantidad").value;
+      let categoria = document.getElementById("categoria").value;
+      let totalAPagar = calcularTotalAPagar(cantidad, categoria);
+      document.getElementById("totalAPagar").innerHTML = "Total a pagar: $" + totalAPagar;
+      document.getElementById("totalAPagarDiv").hidden = false;
+    }
+   </script>
 </body>
 </html>

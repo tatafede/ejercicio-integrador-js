@@ -168,3 +168,9 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.total-pagar {
+  margin: 0 auto;
+  width: 584px;
+  padding: 1px;
+  background-color: #CCE5FF;
+}
