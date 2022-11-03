@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo práctico integrador JS - Federico Tagliabue</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="barra-navegacion">
+    <a class="empresa" href="#">Conf Bs As</a>
+    <a class="item" href="#">La conferencia</a>
+    <a class="item" href="#">Las ordenes</a>
+    <a class="item" href="#">El lugar y la fecha</a>
+    <a class="item seleccionado" href="#">Conviértete en orador</a>
+    <a class="item comprar-tikets" href="#">Comprar tickets</a>
+  </div>
+
+  <div class="contenido">
+    <div class="cuadros">
+      <div class="cuadro estudiante">
+        <p class="titulo">Estudiante</h5>
+        <p class="descripcion">Tienen un descuento</p>
+        <p class="descuento">80%</p>
+        <p class="notas">* presentar documentación</p>
+      </div>
+      <div class="cuadro trainee">
+        <p class="titulo">Trainee</h5>
+        <p class="descripcion">Tienen un descuento</p>
+        <p class="descuento">50%</p>
+        <p class="notas">* presentar documentación</p>
+      </div>
+      <div class="cuadro junior">
+        <p class="titulo">Junior</h5>
+        <p class="descripcion">Tienen un descuento</p>
+        <p class="descuento">15%</p>
+        <p class="notas">* presentar documentación</p>
+      </div>
+      <p class="venta">VENTA</p>
+    </div>
+
+    <div class="formulario">
+      <p class="valor">VALOR DE TICKET $2000</p>
+      <div class="grupo">
+        <input class="text-input-2" type="text" name="nombre" placeholder="Nombre">
+        <input class="text-input-2" type="text" name="apellido" placeholder="Apellido">
+      </div>
+      <input class="text-input-1" type="email" name="correo" placeholder="Correo">
+      <div class="grupo">
+        <div class="label-input-grupo">
+          <label class="label-input" for="cantidad">Cantidad</label>
+          <input class="text-input-1" type="number" name="cantidad" placeholder="Cantidad">
+        </div>
+        <div class="label-input-grupo">
+          <label class="label-input" for="categoria">Categoría</label>
+          <select class="select-input" name="categoria" id="categoria">
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+          </select>
+        </div>
+      </div>
+  
+      <div id="totalAPagar"></div>
+  
+      <div class="botones">
+        <button class="boton">Borrar</button>
+        <button class="boton">Resumen</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie">
+    <a class="item" href="#">Prguntas frecuentes</a>
+    <a class="item" href="#">Contáctenos</a>
+    <a class="item" href="#">Prensa</a>
+    <a class="item" href="#">Conferencias</a>
+    <a class="item" href="#">Conferencias</a>
+    <a class="item" href="#">Términos y condiciones</a>
+    <a class="item" href="#">Privacidad</a>
+    <a class="item" href="#">Estudiantes</a>
+  </div>
+</body>
+</html>
